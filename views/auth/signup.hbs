@@ -2,13 +2,13 @@
 
 <form method="POST" action="/auth/xxx">
     <label>Choose a username:</label>
-    <input type="text" name="username" placeholder="John Doe" required="true" />
+    <input type="text" name="username" placeholder="Rick Mont" required="true" />
     <label>E-mail</label>
-    <input type="email" name="email" placeholder="john@hotmail.com" required="true"/>
+    <input type="email" name="email" placeholder="Rick@hotmail.com" required="true"/>
     <label>Password</label>
     <input type="password" name="password" placeholder="*********" required="true"/>
     <button type="submit">Register</button>
-    <a href="/auth/login">Already have an account? Log in!</a>
+    <a href="/auth/login">Already have an account? Log in here!</a>
     {{#if error}}
         <p style="color: red">{{error}}</p>
     {{/if}}
