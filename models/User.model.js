@@ -4,10 +4,19 @@ const { Schema, model } = require("mongoose");
 const userSchema = new Schema({
   username: {
     type: String,
-    unique: true
+    unique: true,
+    required: [true, 'Please add your username'],
+    trim: true,
   },
-  password: String
-});
+  hashedPassword: {
+    type: String,
+    required: [true, 'Please add your password']
+  },
+},
+{
+  timestamps: true
+}
+);
 
 const User = model("User", userSchema);
 
